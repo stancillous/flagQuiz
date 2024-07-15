@@ -16,7 +16,7 @@ export const gameStore = defineStore("game_store", {
     userScore: 0,
     userName: "",
     currentQuestionIndex: 0 /**keep track of the current question to be shown to the user */,
-    timeLeft: 15 /**duration of the quiz before it ends */,
+    timeLeft: 120 /**duration of the quiz before it ends */,
     flagQuestions: null,
     data: {
       questions: [
@@ -1853,7 +1853,7 @@ export const gameStore = defineStore("game_store", {
     },
     /**func to restart quiz */
     async restartQuiz() {
-      this.timeLeft = 51;
+      this.timeLeft = 120;
       await this.getQuestions();
       if (this.currentTab !== "quiz") {
         this.setTab("quiz");
