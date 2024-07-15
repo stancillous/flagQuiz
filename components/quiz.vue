@@ -79,6 +79,7 @@ function startQuestionTimer() {
 
 function nextQuestion() {
   // progress.value = 4000;
+  isQuestionTimeUp.value = false;
   selectedChoice.value = "";
   clearInterval(interval);
   clearInterval(questionTimer);
@@ -114,6 +115,7 @@ function getChoiceClass(choice: string) {
 onMounted(async () => {
   // appStore.restartQuiz();
   // await appStore.getQuestions();
+  isQuestionTimeUp.value = false;
   startQuestionTimer();
   // appStore.startQuizTimer();
 });
