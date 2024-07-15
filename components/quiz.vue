@@ -47,10 +47,7 @@ const appStore = gameStore();
 
 const progress = ref(5000); /**for the progress bar for each question */
 
-const questionTimeLeft =
-  ref(
-    0
-  ); /**time in seconds for each question before it auto moving to the next */
+const isQuestionTimeUp = ref(false);
 let questionTimer: any;
 
 const selectedChoice = ref("");
@@ -73,7 +70,9 @@ function startQuestionTimer() {
     progress.value -= step;
     if (progress.value <= 0) {
       clearInterval(interval);
-      nextQuestion();
+      isQuestionTimeUp.value = true;
+      selectChoice(currentQuestion.value.question.answer);
+      // nextQuestion();
     }
   }, 100); // Update the progress every 100ms
 }
@@ -92,6 +91,7 @@ function nextQuestion() {
 function selectChoice(choice: string) {
   selectedChoice.value = choice;
   const correct = choice === currentQuestion.value.question.answer;
+  if (isQuestionTimeUp.value) return; /**time ran up */
   appStore.updateUserScore(correct);
 }
 
