@@ -67,7 +67,7 @@ const currentQuestion = computed(() => {
 
 function startQuestionTimer() {
   progress.value = 100;
-  const durationInSeconds = 50;
+  const durationInSeconds = 5;
   const step = 100 / ((durationInSeconds * 1000) / 100);
   interval = setInterval(() => {
     progress.value -= step;
