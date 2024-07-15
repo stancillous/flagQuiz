@@ -37,7 +37,7 @@ button {
 }
 
 body {
-  background-color: var(--bodyBgColor);
+  /* background-color: var(--bodyBgColor); */
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
   background-image: linear-gradient(
