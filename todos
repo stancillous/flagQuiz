@@ -1,0 +1,1 @@
+after showing user correct answer, setimeout for like .5s then call nextQuestion()

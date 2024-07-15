@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  --webColor: #325cd9;
+  --borderRadius: 0.5rem;
+  --boxShadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 1.3rem;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  background-color: cornflowerblue;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding: 1rem 0.5rem;
+  height: 100%;
+  border-radius: 0.3rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+body {
+  background-color: var(--bodyBgColor);
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+      45deg,
+      rgba(19, 13, 12, 0.75),
+      rgba(5, 17, 29, 0.75)
+    ),
+    url("https://d31l02nbp0owar.cloudfront.net/m/s/23892/23882214/a-0060.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
