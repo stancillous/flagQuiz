@@ -36,7 +36,7 @@ import quiz from "./quiz.vue";
 const appStore = gameStore();
 
 const error = ref(""); /**error if user doesn't enter a username */
-const username = ref("bob"); /**to hold username of player */
+const username = ref(""); /**to hold username of player */
 
 /**func to show the questions, first check if username exists, then change component */
 function startQuiz(tabName: string) {
