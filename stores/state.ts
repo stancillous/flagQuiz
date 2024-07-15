@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL: "http://flagquiz.botontapwater.tech",
+  baseURL: "https://flagquiz.botontapwater.tech",
   withCredentials: true,
   headers: {
     Accept: "application/json",
