@@ -3,23 +3,18 @@
     <div class="lb-wrp-container">
       <div class="lb-wrp-content">
         <h2 class="lb-ttl">Leaderboard</h2>
-        <p>
-          Auto-refreshes in <span>{{ timeLeft }} seconds</span>
-        </p>
 
         <table>
           <tr>
             <th></th>
             <th>name</th>
             <th>score</th>
-            <th>time</th>
           </tr>
 
           <tr v-for="(result, index) in leaderboard" :key="index">
             <td>{{ index + 1 }}</td>
             <td>{{ result.username }}</td>
             <td>{{ result.score }}</td>
-            <td>{{ result.created_at }}</td>
           </tr>
         </table>
       </div>
