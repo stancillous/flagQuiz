@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url('./aruma/style.css');
 
 :root {
   --webColor: #325cd9;
   --borderRadius: 0.5rem;
   --boxShadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
+
+
 
 * {
   box-sizing: border-box;
@@ -40,12 +43,15 @@ body {
   /* background-color: var(--bodyBgColor); */
   font-family: "Lato", sans-serif;
   overflow-x: hidden;
+  font-family: 'Aruma Regular';
+  font-weight: 900;
   background-image: linear-gradient(
       45deg,
       rgba(19, 13, 12, 0.75),
       rgba(5, 17, 29, 0.75)
     ),
-    url("https://d31l02nbp0owar.cloudfront.net/m/s/23892/23882214/a-0060.jpg");
+    url("https://thumbs.dreamstime.com/b/muitas-bandeiras-de-v%C3%A1rios-estados-como-s%C3%ADmbolo-da-coopera%C3%A7%C3%A3o-mundial-pavilh%C3%B5es-dos-pa%C3%ADses-do-mundo-sobre-as-que-piscam-o-224354603.jpg");
+    /* url("https://d31l02nbp0owar.cloudfront.net/m/s/23892/23882214/a-0060.jpg"); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
