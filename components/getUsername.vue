@@ -55,7 +55,7 @@ function startQuiz(tabName: string) {
     background-color: white;
     // max-height: 40rem;
     // min-width: 50rem;
-    
+
     padding: 3rem 2rem;
     text-align: center;
     .hpage-content {
@@ -82,7 +82,7 @@ function startQuiz(tabName: string) {
           width: 100%;
           text-align: center;
           font-size: 1.3rem;
-          border: .1px solid rgb(25, 22, 22);
+          border: 0.1px solid rgb(25, 22, 22);
           &::placeholder {
             font-size: 1.2rem;
           }
