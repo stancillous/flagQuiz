@@ -16,7 +16,7 @@ export const gameStore = defineStore("game_store", {
     userScore: 0,
     userName: "",
     currentQuestionIndex: 0 /**keep track of the current question to be shown to the user */,
-    timeLeft: 120 /**duration of the quiz before it ends */,
+    timeLeft: 240 /**duration of the quiz before it ends */,
     flagQuestions: null,
     data: {
       questions: [
