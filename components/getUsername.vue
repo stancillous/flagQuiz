@@ -5,11 +5,6 @@
         <div class="hpage-content">
           <h1>Welcome!</h1>
           <h2 class="hpage-ttl">Country flags quiz</h2>
-          <p>
-            Guess the flags of 197 countries: <br />
-            from Afghanistan to Zimbambwe
-          </p>
-
           <div class="user-name-wrp">
             <form action="">
               <input
@@ -52,7 +47,7 @@ function startQuiz(tabName: string) {
 <style lang="scss" scoped>
 .hpage-wrp {
   max-width: 800px;
-  margin: 2rem auto;
+  margin: 1.4rem auto;
   display: grid;
   height: auto;
   place-items: center;
@@ -60,22 +55,21 @@ function startQuiz(tabName: string) {
     background-color: white;
     // max-height: 40rem;
     // min-width: 50rem;
+    
     padding: 3rem 2rem;
     text-align: center;
     .hpage-content {
       h1 {
         font-size: 2.8rem;
-        margin-bottom: 2rem;
+        font-size: 8rem;
+        color: #053793;
+        margin-bottom: 1rem;
       }
       .hpage-ttl {
-        font-size: 2rem;
+        font-size: 2.8rem;
+        opacity: 0.6;
         text-transform: capitalize;
         font-weight: 700;
-      }
-      p {
-        line-height: 140%;
-        font-size: 1.3rem;
-        margin: 1rem 0;
       }
 
       .user-name-wrp {
@@ -88,25 +82,26 @@ function startQuiz(tabName: string) {
           width: 100%;
           text-align: center;
           font-size: 1.3rem;
-
+          border: .1px solid rgb(25, 22, 22);
           &::placeholder {
             font-size: 1.2rem;
           }
         }
         .username-error {
           color: red;
+          font-weight: 400;
           font-size: 1.2rem;
         }
         button {
           all: unset;
           cursor: pointer;
-          background-color: cornflowerblue;
+          background-color: #053793;
+          color: white;
           text-align: center;
           font-weight: 600;
           font-size: 1.3rem;
           text-transform: uppercase;
           padding: 1rem 0;
-          // height: 100%;
           margin: 1rem 0;
           width: 100%;
         }
