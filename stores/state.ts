@@ -64,10 +64,10 @@ export const gameStore = defineStore("game_store", {
           },
         });
         if (data) {
-          console.log("post score data ", data);
+          // console.log("post score data ", data);
         }
       } catch (error) {
-        console.log("post score error => ", error);
+        // console.log("post score error => ", error);
       }
     },
     async getLeaderboard() {
@@ -83,7 +83,7 @@ export const gameStore = defineStore("game_store", {
     },
     nextQuestion() {
       /**func to take user to next question */
-      if (this.currentQuestionIndex < this.data.questions.length - 1) {
+      if (this.currentQuestionIndex < this.flagQuestions.questions.length - 1) {
         this.currentQuestionIndex++;
       } else {
         this.setTab("quizComplete");
