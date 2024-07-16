@@ -79,7 +79,6 @@ function startQuestionTimer() {
         /**show next flag after some seconds */
         nextQuestion();
       }, 3000);
-      // nextQuestion();
     }
   }, 100); // Update the progress every 100ms
 }
