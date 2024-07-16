@@ -1917,7 +1917,7 @@ export const gameStore = defineStore("game_store", {
       }
     },
     updateUserScore(correct: boolean) {
-      if (correct) this.userScore++;
+      if (correct) this.userScore+=500;
     },
     async getQuestions() {
       /**func to get the questions */
