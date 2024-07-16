@@ -4,7 +4,10 @@
       <div class="user-score-wrp">
         <div class="nav-wrp">
           <QuizTimer />
-          <h1 class="user-score">Score: {{ appStore.userScore }}</h1>
+          <div>
+            <h1 class="user-score">Score: {{ appStore.userScore }}</h1>
+            <span class="add-score">+500</span>
+          </div>
         </div>
       </div>
 
@@ -93,7 +96,19 @@ function selectChoice(choice: string) {
   selectedChoice.value = choice;
   const correct = choice === currentQuestion.value.question.answer;
   if (isQuestionTimeUp.value) return; /**time ran up */
-  appStore.updateUserScore(correct);
+
+  if (correct) {
+    const addScorePopup = document.querySelector(".add-score");
+
+    if (addScorePopup) {
+      addScorePopup.classList.add("showAddedScore");
+      setTimeout(() => {
+        addScorePopup.classList.remove("showAddedScore");
+      }, 900);
+    }
+    appStore.userScore += 500;
+  }
+  // appStore.updateUserScore(correct);
 }
 
 /**func with classes to be added to the choices, to show if selected choise is right or wrong */
@@ -127,6 +142,11 @@ onUnmounted(() => {
 </script>
 
 <style scoped lang="scss">
+.showAddedScore {
+  opacity: 1;
+  visibility: visible;
+  max-height: 3rem;
+}
 .flags-q-wrp {
   padding: 0.5rem;
   max-width: 800px;
@@ -142,10 +162,31 @@ onUnmounted(() => {
         padding: 1rem 0;
         align-items: center;
         justify-content: space-between;
-        .user-score {
-          text-align: center;
-          font-size: 1.5rem;
-          font-weight: 500;
+
+        div {
+          // border: 1px solid;
+          position: relative;
+          .user-score {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+          }
+          .add-score {
+            position: absolute;
+            top: -1.4rem;
+            right: 0rem;
+            font-size: 1rem;
+            color: var(--priColor);
+            opacity: 0;
+            visibility: hidden;
+            max-height: 0;
+            transition: all 0.2s ease-in-out;
+          }
+          .showAddedScore {
+            opacity: 1;
+            visibility: visible;
+            max-height: 3rem;
+          }
         }
       }
     }
