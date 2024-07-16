@@ -67,7 +67,7 @@ const currentQuestion = computed(() => {
 
 function startQuestionTimer() {
   progress.value = 100;
-  const durationInSeconds = 5;
+  const durationInSeconds = 10;
   const step = 100 / ((durationInSeconds * 1000) / 100);
   interval = setInterval(() => {
     progress.value -= step;
@@ -75,6 +75,10 @@ function startQuestionTimer() {
       clearInterval(interval);
       isQuestionTimeUp.value = true;
       selectChoice(currentQuestion.value.question.answer);
+      setTimeout(() => {
+        /**show next flag after some seconds */
+        nextQuestion();
+      }, 3000);
       // nextQuestion();
     }
   }, 100); // Update the progress every 100ms
