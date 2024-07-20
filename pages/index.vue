@@ -1,6 +1,14 @@
 <template>
   <div>
+    <div class="video-bg">
+      <div class="vbg-wrp">
+        <!-- <video src="../assets/earth-countries-256-medium.gif" autoplay></video> -->
+        <img src="../assets/earth-countries-256-medium.gif" alt="earth spinning image">
+      </div>
+    </div>
     <div class="index-wrp">
+
+
       <div class="index-wrp-content">
         <component :is="currentComponent"></component>
         <!-- <KeepAlive> </KeepAlive> -->
@@ -34,6 +42,36 @@ const currentComponent = computed(() => {
 </script>
 
 <style lang="scss" scoped>
+  .video-bg{
+    // border: 5px solid red;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .vbg-wrp{
+      height: 100vh;
+      width: 100vw;
+
+      img{
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+      }
+    }
+  }
 .index-wrp {
   max-width: 800px;
   min-height: 100vh;
@@ -41,6 +79,7 @@ const currentComponent = computed(() => {
   display: grid;
   place-items: center;
   position: relative;
+
 
   .index-wrp-content {
     background-color: white;
