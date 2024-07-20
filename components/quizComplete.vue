@@ -75,11 +75,11 @@
           </button> -->
         </div>
 
-        <div class="leaderboard">
+        <!-- <div class="leaderboard">
           <template v-if="viewLeaderboard">
             <ScoreLeaderboard />
           </template>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
