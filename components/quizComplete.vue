@@ -2,12 +2,12 @@
   <div class="qz-wrp">
     <div class="qz-wrp-container">
       <div class="qz-wrp-content">
-        <h1>Time's up :(</h1>
+        <h1>Good Job, {{ appStore.userName }}</h1>
         <h3>Your score: {{ appStore.userScore }}</h3>
 
         <div class="qz-dets">
           <button class="pa-btn" @click="callRestartQuiz()">
-            <svg
+            <!-- <svg
               width="14px"
               height="14px"
               viewBox="0 0 24 24"
@@ -29,10 +29,10 @@
                   stroke-linejoin="round"
                 ></path>
               </g>
-            </svg>
+            </svg> -->
             Play again
           </button>
-          <button @click="viewLeaderboard = !viewLeaderboard">
+          <!-- <button @click="viewLeaderboard = !viewLeaderboard">
             <svg
               fill="#053793"
               version="1.1"
@@ -72,7 +72,7 @@
               </g>
             </svg>
             view leaderboard
-          </button>
+          </button> -->
         </div>
 
         <div class="leaderboard">
@@ -87,19 +87,19 @@
 
 <script setup>
 import { gameStore } from "~/stores/state";
-const viewLeaderboard = ref(false);
+// const viewLeaderboard = ref(false); tells when to hide/show the leaderboard
 
 const appStore = gameStore();
 
-function toggleLeaderboard() {
-  const leaderboard = document.querySelector(".lb-wrp-container");
-  if (leaderboard) {
-    leaderboard.classList.add("showLeaderboard");
-    console.log("lead ", leaderboard);
-  } else {
-    alert("nop");
-  }
-}
+// function toggleLeaderboard() {
+//   const leaderboard = document.querySelector(".lb-wrp-container");
+//   if (leaderboard) {
+//     leaderboard.classList.add("showLeaderboard");
+//     console.log("lead ", leaderboard);
+//   } else {
+//     alert("nop");
+//   }
+// }
 async function callRestartQuiz() {
   await appStore.restartQuiz();
 }
@@ -115,12 +115,12 @@ async function callRestartQuiz() {
       h1 {
         margin: 1rem 0;
         font-weight: 400;
-        font-size: 1.2rem;
+        font-size: 2.2rem;
+        opacity: .7;
       }
       h3 {
         font-size: 2rem;
-        // color: #053793;
-        // font-weight: 500;
+        opacity: .8;
         margin-bottom: 3rem;
         text-transform: capitalize;
       }
@@ -132,6 +132,8 @@ async function callRestartQuiz() {
         button {
           all: unset;
           color: #053793;
+          background-color: #053793;
+          color: white;
           font-size: 1.4rem;
           width: 20rem;
           text-align: center;
