@@ -8,6 +8,7 @@
           <div class="user-name-wrp">
             <form action="">
               <input
+                autofocus
                 type="text"
                 v-model="username"
                 required
