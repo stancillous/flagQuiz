@@ -81,6 +81,7 @@ function startQuiz(tabName: string) {
           color: black;
           padding: 1rem 0.8rem;
           width: 100%;
+          font-family: 'Aruma Regular';
           text-align: center;
           font-size: 1.3rem;
           border: 0.1px solid rgb(25, 22, 22);
