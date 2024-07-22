@@ -2,7 +2,7 @@
   <div class="qz-wrp">
     <div class="qz-wrp-container">
       <div class="qz-wrp-content">
-        <h1>Good Job, {{ appStore.userName }}</h1>
+        <h1>Hi, {{ appStore.userName }}</h1>
         <h3>Your score: {{ appStore.userScore }}</h3>
 
         <div class="qz-dets">
