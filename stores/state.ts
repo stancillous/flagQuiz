@@ -43,7 +43,7 @@ export const gameStore = defineStore("game_store", {
         } else {
           clearInterval(quizTimer); /**time for quiz ended, post user results */
 
-          await this.postUserResult(); /**post user results */
+          // await this.postUserResult(); /**post user results */
 
           this.setTab("quizComplete");
         }
