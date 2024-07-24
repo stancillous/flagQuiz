@@ -2,7 +2,7 @@
   <div>
     <div class="video-bg">
       <div class="vbg-wrp">
-        <video src="../assets/856356-hd_1280_720_25fps.mp4" loop muted autoplay></video>
+        <!-- <video src="../assets/856356-hd_1280_720_25fps.mp4" loop muted autoplay></video> -->
         <!-- <img src="../assets/earth-countries-256-medium.gif" alt="earth spinning image"> -->
       </div>
     </div>
@@ -42,43 +42,43 @@ const currentComponent = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-  .video-bg{
-    // border: 5px solid red;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    width: 100vw;
+  // .video-bg{
+  //   // border: 5px solid red;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   height: 100vh;
+  //   width: 100vw;
 
-    &::after{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: rgba(0,0,0,0.5);
-    }
-    .vbg-wrp{
-      height: 100vh;
-      width: 100vw;
+  //   &::after{
+  //     content: '';
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     height: 100%;
+  //     width: 100%;
+  //     background-color: rgba(0,0,0,0.5);
+  //   }
+  //   .vbg-wrp{
+  //     height: 100vh;
+  //     width: 100vw;
 
-      video{
-        height: 100%;
-        width: 100%;
-        border: 4px solid;
-        object-fit: cover;
-      }
+  //     <!-- video{
+  //       height: 100%;
+  //       width: 100%;
+  //       border: 4px solid;
+  //       object-fit: cover;
+  //     } -->
 
-      img{
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        object-fit: cover;
-      }
-    }
-  }
+  //     img{
+  //       width: 100%;
+  //       height: 100%;
+  //       z-index: -1;
+  //       object-fit: cover;
+  //     }
+  //   }
+  // }
 .index-wrp {
   max-width: 800px;
   min-height: 100vh;
