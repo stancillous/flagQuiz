@@ -2,8 +2,8 @@
   <div>
     <div class="video-bg">
       <div class="vbg-wrp">
-        <!-- <video src="../assets/earth-countries-256-medium.gif" autoplay></video> -->
-        <img src="../assets/earth-countries-256-medium.gif" alt="earth spinning image">
+        <video src="../assets/856356-hd_1280_720_25fps.mp4" loop muted autoplay></video>
+        <!-- <img src="../assets/earth-countries-256-medium.gif" alt="earth spinning image"> -->
       </div>
     </div>
     <div class="index-wrp">
@@ -63,6 +63,13 @@ const currentComponent = computed(() => {
     .vbg-wrp{
       height: 100vh;
       width: 100vw;
+
+      video{
+        height: 100%;
+        width: 100%;
+        border: 4px solid;
+        object-fit: cover;
+      }
 
       img{
         width: 100%;
