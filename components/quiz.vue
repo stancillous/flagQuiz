@@ -31,7 +31,7 @@
             </li>
           </ul>
           <div class="btn-wrp">
-            <button class="nxt-btn" @click="nextQuestion">Next</button>
+            <button style="color: white;" class="nxt-btn" @click="nextQuestion">Next</button>
           </div>
         </div>
       </div>
@@ -150,6 +150,11 @@ onUnmounted(() => {
   visibility: visible;
   max-height: 3rem;
 }
+
+button{
+  color: white;
+}
+
 .flags-q-wrp {
   padding: 0.5rem;
   max-width: 800px;

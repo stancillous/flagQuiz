@@ -27,7 +27,8 @@ p {
 button {
   all: unset;
   cursor: pointer;
-  background-color: cornflowerblue;
+  background-color: var(--priColor);
+  color: white;
   text-align: center;
   font-weight: 600;
   font-size: 1.3rem;
