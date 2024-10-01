@@ -2,6 +2,10 @@
   <div class="flags-q-wrp">
     <div class="flags-wrp-content">
       <div class="user-score-wrp">
+        <div class="quit-match">
+          <svg @click="appStore.setTab('getUsername')" data-v-3e1c973b="" width="25px" height="25px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none"><path data-v-3e1c973b="" class="icon-styleable-color" fill="rgba(0, 0, 0, .88)" fill-rule="evenodd" clip-rule="evenodd" d="M6.58579 8.00008L3.05025 11.5356C2.65973 11.9261 2.65973 12.5593 3.05025 12.9498C3.44078 13.3404 4.07394 13.3404 4.46447 12.9498L8 9.41429L11.5355 12.9498C11.9261 13.3404 12.5592 13.3404 12.9497 12.9498C13.3403 12.5593 13.3403 11.9261 12.9497 11.5356L9.41421 8.00008L12.9497 4.46455C13.3403 4.07402 13.3403 3.44086 12.9497 3.05033C12.5592 2.65981 11.9261 2.65981 11.5355 3.05033L8 6.58587L4.46447 3.05033C4.07394 2.65981 3.44078 2.65981 3.05025 3.05033C2.65973 3.44086 2.65973 4.07402 3.05025 4.46455L6.58579 8.00008Z"></path></svg>
+          <span>Quit</span>
+        </div>
         <div class="nav-wrp">
           <QuizTimer />
           <div>
@@ -165,6 +169,28 @@ button{
     border-radius: var(--borderRadius);
     padding: 0.5rem 2rem;
     .user-score-wrp {
+
+      .quit-match{
+        margin-bottom: 4rem;
+        // float: right;
+        display: flex;
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        
+        svg{
+          cursor: pointer;
+          opacity: .4;
+        }
+        span{
+          font-weight: 500;
+          font-size: 1.3rem;
+          opacity: .5;
+          margin-left: .3rem;
+        }
+        // width: 3rem;
+        
+      }
       .nav-wrp {
         display: flex;
         padding: 1rem 0;
