@@ -47,21 +47,19 @@ function startQuiz(tabName: string) {
 
 <style lang="scss" scoped>
 .hpage-wrp {
-  max-width: 800px;
+  // max-width: 800px;
+  width: 100%;
   margin: 1.4rem auto;
   display: grid;
   height: auto;
   place-items: center;
   .hpage-wrp-content {
     background-color: white;
-    // max-height: 40rem;
-    // min-width: 50rem;
 
     padding: 3rem 2rem;
     text-align: center;
     .hpage-content {
       h1 {
-        font-size: 2.8rem;
         font-size: 8rem;
         color: #053793;
         margin-bottom: 1rem;
@@ -88,6 +86,10 @@ function startQuiz(tabName: string) {
           &::placeholder {
             font-size: 1.2rem;
           }
+          &:focus{
+            border: 0.1px solid rgb(25, 22, 22);
+            outline: none;
+          }
         }
         .username-error {
           color: red;
@@ -108,6 +110,17 @@ function startQuiz(tabName: string) {
           width: 100%;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hpage-wrp .hpage-wrp-content .hpage-content {
+    h1 {
+      font-size: 4rem;
+    }
+    .hpage-ttl {
+      font-size: 2.4rem;
     }
   }
 }
