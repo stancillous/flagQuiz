@@ -116,11 +116,11 @@ async function callRestartQuiz() {
         margin: 1rem 0;
         font-weight: 400;
         font-size: 2.2rem;
-        opacity: .7;
+        opacity: 0.7;
       }
       h3 {
         font-size: 2rem;
-        opacity: .8;
+        opacity: 0.8;
         margin-bottom: 3rem;
         text-transform: capitalize;
       }
