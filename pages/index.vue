@@ -95,7 +95,7 @@ const currentComponent = computed(() => {
 @media screen and (max-width: 580px) {
   .index-wrp .index-wrp-content {
     min-width: unset;
-    width: 80vw;
+    width: 90vw;
   }
 }
 </style>
